@@ -66,3 +66,5 @@ group :test do
   gem "guard-minitest"
   gem "rails-controller-testing"
 end
+
+gem "bcrypt"
