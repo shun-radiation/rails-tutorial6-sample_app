@@ -14,7 +14,8 @@ require 'faker'
 User.create!(name: "Example User",
               email: "example@railstutorial.org",
               password: "fogefoge",
-              password_confirmation: "fogefoge")
+              password_confirmation: "fogefoge",
+              admin: true)
 
 # 追加のユーザーをまとめて生成する
 99.times do |n|
