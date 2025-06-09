@@ -5,12 +5,14 @@ class UsersController < ApplicationController
 
 # app/controllers/users_controller.rb
 def index
-  @users = User.paginate(page: params[:page], per_page: 10)
+  # @users = User.paginate(page: params[:page], per_page: 10)
+  @users = User.where(activated: true).paginate(page: params[:page], per_page: 10)
 end
 
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated?
     # debugger
   end
 
